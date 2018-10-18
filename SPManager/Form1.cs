@@ -3,7 +3,7 @@ using System.Drawing;
 using System.IO.Ports;
 using System.Windows.Forms;
 
-namespace COM
+namespace SPManager
 {
     public partial class Form1 : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace COM
+﻿namespace SPManager
 {
     partial class Form1
     {
