@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("COM")]
+[assembly: AssemblyProduct("SPManager")]
 [assembly: AssemblyCopyright("https://github.com/Kallu609")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
