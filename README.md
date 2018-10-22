@@ -17,4 +17,4 @@ _Language in images is finnish. Locale support WIP._
 * .NET Framework 4.6.1 (_I think we can go lower_)
 
 ## thank you'ses
-* [Termite](https://www.compuphase.com/software_termite.htm#_) for the design, great application btw!
+* CompuPhase [Termite](https://www.compuphase.com/software_termite.htm#_) for the design, great application btw!
