@@ -4,9 +4,9 @@ C# flavoured serial port manager GUI.
 
 Allows sending and receiving data from COM / serial ports.
 
-![Main form](https://raw.githubusercontent.com/kallu609/SPManager/master/gitassets/mainform.png)
+![Main form](./gitassets/mainform.png)
 
-![Settings form](https://raw.githubusercontent.com/kallu609/SPManager/master/gitassets/settingsform.png)
+![Settings form](./gitassets/settingsform.png)
 
 _Language in images is finnish. Locale support WIP._
 
