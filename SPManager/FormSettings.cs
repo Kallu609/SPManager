@@ -12,9 +12,17 @@ namespace SPManager
 {
     public partial class FormSettings : Form
     {
-        public FormSettings()
+        FormMain mainForm;
+        public FormSettings(FormMain parent)
         {
             InitializeComponent();
+            mainForm = parent;
+        }
+
+        private void FormSettings_Load(object sender, EventArgs e)
+        {
+            TopLevel = true;
+            CenterToParent();
         }
     }
 }

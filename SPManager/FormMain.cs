@@ -5,13 +5,20 @@ using System.Windows.Forms;
 
 namespace SPManager
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
-        public Form1()
+        FormSettings settingsForm;
+
+        public FormMain()
         {
             InitializeComponent();
             SetupForm();
             LoadCOMPorts();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            WriteOutput($"{ProductName} v{ProductVersion} käynnistetty");
         }
 
         private void SetupForm()
@@ -24,9 +31,11 @@ namespace SPManager
             string[] ports = SerialPort.GetPortNames();
         }
 
-        private void WriteOutput(string text, Color color)
+        private void WriteOutput(string text, Color? color = null)
         {
-            txtOutput.AppendText(Environment.NewLine + text, color);
+            string newLine = !string.IsNullOrEmpty(txtOutput.Text) ? Environment.NewLine : "";
+
+            txtOutput.AppendText(newLine + text, color ?? Color.Black);
             txtOutput.SelectionStart = txtOutput.Text.Length;
             txtOutput.ScrollToCaret();
         }
@@ -46,11 +55,6 @@ namespace SPManager
             txtOutput.Clear();
         }
 
-        private void txtMessage_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtMessage_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -68,6 +72,20 @@ namespace SPManager
                 e.SuppressKeyPress = true;
                 e.Handled = true;
             }
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            if (settingsForm == null || settingsForm.IsDisposed)
+            {
+                settingsForm = new FormSettings(this);
+                settingsForm.ShowDialog(this);
+                return;
+            }
+
+            // Good behaviour? yes? no?
+            settingsForm.ShowDialog(this);
+            settingsForm.Activate();
         }
     }
 }
