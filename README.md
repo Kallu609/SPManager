@@ -1,6 +1,6 @@
 # SPManager
 
-C# flavoured serial port manager GUI. Allows sending and receiving data from COM / serial ports.
+C# serial port manager GUI. Allows sending and receiving data from COM / serial ports.
 
 ![Main form](./gitassets/mainform.png)
 
